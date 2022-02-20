@@ -114,5 +114,24 @@ public class LinkedList {
         MyNode nextNode = tempNode.next.next;
         previousNode.next = nextNode;
     }
-}
 
+    public void sort() {
+        MyNode initialStart = head, index = null;
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        while (initialStart != null) {
+            index = initialStart.next;
+            while (index != null) {
+                if (initialStart.key > index.key) {
+                    int temp = initialStart.key;
+                    initialStart.key = index.key;
+                    index.key = temp;
+                }
+                index = index.next;
+            }
+            initialStart = initialStart.next;
+        }
+    }
+}

@@ -35,4 +35,10 @@ public class Operations {
         linkedList.pop();
         linkedList.print();
     }
+    public static void deleteLastNode() {
+        LinkedList linkedList = addDataAtStart();
+        System.out.println();
+        linkedList.popLast();
+        linkedList.print();
+    }
 }

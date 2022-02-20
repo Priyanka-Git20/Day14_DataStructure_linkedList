@@ -13,7 +13,8 @@ public class LinkedList {
             MyNode temp = head;
             this.head = newNode;
             newNode.next = temp;
-        } return newNode;
+        }
+        return newNode;
     }
 
     public void print() {
@@ -43,5 +44,9 @@ public class LinkedList {
         MyNode tempNode = previousNode.next;
         previousNode.next = newNode;
         newNode.next = tempNode;
+    }
+
+    public void pop() {
+        this.head = this.head.next;
     }
 }

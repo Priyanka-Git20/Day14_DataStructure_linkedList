@@ -58,4 +58,28 @@ public class LinkedList {
         this.tail = tempNode;
         tempNode.next = null;
     }
+
+    public void searchNode(int value) {
+        MyNode tempNode = head;
+        int index = 1;
+        boolean flag = false;
+        if (head == null) {
+            System.out.println("List is empty");
+        } else {
+            while (tempNode != null) {
+                if (tempNode.key == value) {
+                    flag = true;
+                    break;
+                }
+                index++;
+                tempNode = tempNode.next;
+            }
+        }
+        if (flag == true) {
+            System.out.println("Value:" + value + " is present at Index:" + index);
+        } else {
+            System.out.println("Element no present");
+        }
+    }
 }
+

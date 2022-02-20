@@ -41,4 +41,9 @@ public class Operations {
         linkedList.popLast();
         linkedList.print();
     }
+
+    public static void findNodeBasedOnValue() {
+        LinkedList linkedList = addDataAtStart();
+        linkedList.searchNode(30);
+    }
 }

@@ -22,9 +22,23 @@ public class LinkedList {
         } else {
             MyNode temp = head;
             while (temp != null) {
-                System.out.print(temp.key+ " ");
+                System.out.print(temp.key + " ");
                 temp = temp.next;
             }
         }
     }
+
+    public void append(int key) {
+        MyNode newNode = new MyNode(key);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            this.tail.next = newNode;
+            tail = newNode;
+        }
+    }
 }
+
+
+

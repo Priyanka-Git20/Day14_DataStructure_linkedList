@@ -7,4 +7,11 @@ public class MyNode {
         this.key = key;
         this.next = null;
     }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "key =" + key +
+                ", next=" + next;};
 }
+

@@ -46,4 +46,12 @@ public class Operations {
         LinkedList linkedList = addDataAtStart();
         linkedList.searchNode(30);
     }
+
+    public static void insertAfterSearchNode() {
+        LinkedList linkedList = addDataAtStart();
+        MyNode newNode = new MyNode(40);
+        MyNode previousNode = linkedList.searchNodeAt(30, newNode);
+        System.out.println("Before");
+        linkedList.print();
+    }
 }

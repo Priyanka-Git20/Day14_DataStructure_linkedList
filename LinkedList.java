@@ -81,5 +81,24 @@ public class LinkedList {
             System.out.println("Element no present");
         }
     }
+
+    public MyNode searchNodeAt(int value, MyNode newNode) {
+        MyNode tempNode = head;
+        if (head == null) {
+            System.out.println("List is empty");
+        } else {
+            while (tempNode != null) {
+                if (tempNode.key == value) {
+                    break;
+                }
+                tempNode = tempNode.next;
+
+            }
+            MyNode tempNodeNext = tempNode.next;
+            tempNode.next = newNode;
+            newNode.next = tempNodeNext;
+        }
+        return tempNode;
+    }
 }
 
